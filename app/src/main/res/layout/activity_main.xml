@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layoutDescription="@xml/activity_main_scene"
+    tools:context=".MainActivity">
+
+    <View
+        android:id="@+id/v_background"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/main"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@id/guideline_23"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+        />
+
+
+    <androidx.constraintlayout.utils.widget.ImageFilterView
+        android:id="@+id/iv_profile_photo"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/telegramprofile"
+        app:layout_constraintBottom_toTopOf="@+id/guideline_44"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_44"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.44" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_23"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.23" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.12" />
+
+
+    <ImageView
+        android:id="@+id/iv_menu"
+        style="@style/ImageViews.Clikable"
+        android:layout_marginTop="@dimen/margin_small"
+        android:layout_marginEnd="@dimen/margin_small"
+        android:src="@drawable/ic_menu"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_qr_code"
+        style="@style/ImageViews.Clikable"
+        android:layout_marginEnd="@dimen/margin_medium"
+        android:src="@drawable/ic_qr"
+        app:layout_constraintEnd_toStartOf="@+id/iv_search"
+        app:layout_constraintTop_toTopOf="@+id/iv_menu" />
+
+    <ImageView
+        android:id="@+id/iv_search"
+        style="@style/ImageViews.Clikable"
+        android:src="@drawable/ic_search"
+        android:visibility="gone"
+        app:layout_constraintEnd_toStartOf="@+id/iv_menu"
+        app:layout_constraintTop_toTopOf="@+id/iv_menu" />
+
+    <ImageView
+        android:id="@+id/iv_back"
+        style="@style/ImageViews.Clikable"
+        android:layout_margin="@dimen/margin_small"
+        android:src="@drawable/ic_back_arrow"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:text="Ahmed Ali"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/tv_is_online"
+        app:layout_constraintStart_toStartOf="@+id/tv_is_online" />
+
+    <TextView
+        android:id="@+id/tv_is_online"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_medium"
+        android:text="online"
+        android:textColor="#CCFFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/guideline_44"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_camera"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:src="@drawable/ic_camera"
+        app:backgroundTint="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_profile_photo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_profile_photo" />
+
+
+</androidx.constraintlayout.motion.widget.MotionLayout>
