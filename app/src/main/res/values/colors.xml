@@ -9,4 +9,6 @@
     <color name="white">#FFFFFFFF</color>
     <color name="main">#5A8EBA</color>
     <color name="buttons">#50A6E9</color>
+    <color name="gray">#B0B0B0</color>
+    <color name="horizintal_row_color">#C4C4C4</color>
 </resources>

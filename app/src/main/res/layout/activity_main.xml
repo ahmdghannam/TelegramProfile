@@ -65,20 +65,19 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/iv_qr_code"
+        android:id="@+id/iv_call"
         style="@style/ImageViews.Clikable"
         android:layout_marginEnd="@dimen/margin_medium"
-        android:src="@drawable/ic_qr"
+        android:src="@drawable/ic_call"
         app:layout_constraintEnd_toStartOf="@+id/iv_menu"
         app:layout_constraintTop_toTopOf="@+id/iv_menu" />
 
     <ImageView
-        android:id="@+id/iv_search"
+        android:id="@+id/iv_video"
         style="@style/ImageViews.Clikable"
-        android:src="@drawable/ic_search"
         android:layout_marginEnd="@dimen/margin_medium"
-        android:visibility="gone"
-        app:layout_constraintEnd_toStartOf="@+id/iv_menu"
+        android:src="@drawable/ic_video"
+        app:layout_constraintEnd_toStartOf="@+id/iv_call"
         app:layout_constraintTop_toTopOf="@+id/iv_menu" />
 
     <ImageView
@@ -94,7 +93,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="5dp"
-        android:text="Ahmed Ali"
+        android:text="@string/name"
         android:textColor="@color/white"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/tv_is_online"
@@ -105,23 +104,90 @@
         android:layout_width="70dp"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/margin_medium"
-        android:text="online"
+        android:text="@string/online"
         android:textColor="#CCFFFFFF"
         app:layout_constraintBottom_toTopOf="@+id/guideline_44"
         app:layout_constraintStart_toStartOf="parent" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fab_camera"
+        android:id="@+id/fab_message"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="20dp"
-        android:src="@drawable/ic_camera"
+        android:src="@drawable/ic_message"
         app:backgroundTint="@color/white"
         app:layout_constraintBottom_toBottomOf="@+id/iv_profile_photo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/iv_profile_photo" />
 
 
+    <TextView
+        android:id="@+id/tv_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_small_plus"
+        android:text="@string/info"
+        android:textColor="@color/main"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guideline_44"
 
+        />
+
+    <TextView
+        android:id="@+id/tv_phone_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_very_small"
+        android:text="@string/random_phone_number"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="@id/tv_info"
+        app:layout_constraintTop_toBottomOf="@id/tv_info" />
+
+    <TextView
+        android:id="@+id/tv_mobile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_very_small"
+        android:text="@string/mobile"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@+id/tv_phone_number"
+        app:layout_constraintTop_toBottomOf="@+id/tv_phone_number" />
+
+    <View
+        android:id="@+id/horizental_row"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginStart="@dimen/margin_small_plus"
+        android:layout_marginTop="@dimen/margin_small_plus"
+        android:background="@color/horizintal_row_color"
+        app:layout_constraintTop_toBottomOf="@id/tv_mobile" />
+
+    <TextView
+        android:id="@+id/tv_notifications"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_small_plus"
+        android:text="@string/notifications"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="@id/horizental_row"
+        app:layout_constraintTop_toBottomOf="@id/horizental_row" />
+
+    <TextView
+        android:id="@+id/tv_on"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_small"
+        android:text="@string/on"
+        app:layout_constraintStart_toStartOf="@id/tv_notifications"
+        app:layout_constraintTop_toBottomOf="@id/tv_notifications" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/switch_notifications"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/margin_small"
+        app:layout_constraintBottom_toBottomOf="@id/tv_on"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_notifications" />
 
 </androidx.constraintlayout.motion.widget.MotionLayout>
